@@ -1,0 +1,40 @@
+<div ng-controller="editCtrl">
+
+
+<form>
+<div class="form-group">
+<label for="ime">Ime</label>
+<input id="ime" class="form-control" ng-model="newZadatak.ime">
+</div>
+<div class="form-group">
+<label for="zaduzeni">Zaduzeni</label>
+<input id="zaduzeni" class="form-control" ng-model="newZadatak.zaduzeni">
+</div>
+<div class="form-group">
+<label for="bodovi">Bodovi</label>
+<input id="bodovi" class="form-control" ng-model="newZadatak.bodovi">
+</div>
+<div class="form-group">
+<label for="stanje">Stanje</label>
+<select id="stanje" class="form-control" ng-model="newZadatak.stanjeId">
+<option ng-repeat="stanje in stanja" value="{{stanje.id}}">{{stanje.ime}}</option>
+</select>
+</div>
+<div class="form-group">
+<label for="sprint">Sprint</label>
+<select id="sprint" class="form-control" ng-model="newZadatak.sprintId">
+<option ng-repeat="sprint in sprintovi" value="{{sprint.id}}">{{sprint.ime}}</option>
+</select>
+</div>
+<button class="btn btn-primary" ng-click="doEdit()">Izmeni</button>
+</form>
+
+
+
+
+
+
+
+
+
+</div>
